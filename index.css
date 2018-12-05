@@ -4,20 +4,97 @@ body {
   height: 100%;
   width: 100%;
   color: #fff;
+
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .wrapper {
-  background-color: #2d3d40;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: #2d3d40;
   padding: 50px 20px;
+
 }
+
 .application-form {
+  position: relative;
+  margin-bottom: 50px;
 }
+
 .application-form input {
   color: #000;
-  font-size: 20px !important;
-  background-color: #e6eff3 !important;
-  border-radius: 0.25rem !important;
-  padding: 0.625rem !important;
+  font-size: 20px;
+  background-color: #e6eff3;
+  border-radius: 0.25rem;
+  padding: 2.625rem 1rem;
+}
+
+.form-fields {
+  margin-bottom: 20px;
+}
+
+/* Style for languages */
+.form-fields p {
+  display: flex;
+  align-items: stretch;
+  padding: 6px;
+}
+
+.item-lv {
+  padding-left: 7px;
+}
+
+/* Style Table */
+#table {
+
+  margin: 0 15px 20px;
+}
+
+#table .th {
+  margin-bottom: 10px;
+}
+
+#table .td {
+  margin: 0;
+  padding: 0;
+}
+
+
+.apf-wrp_table .btn-control {
+  text-align: end;
+  margin-right: 20px;
+}
+
+#table input {
+  border: none;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 0.05rem;
+  padding: 1.8rem 1rem;
+}
+
+.btn-control input[type="button"] {
+  background-color: #f3713c;
+  border-color: #f3713c;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  line-height: 17px;
+  font-size: 12px;
+}
+
+
+
+/* Buttun submit form */
+.form-fields .apf__submit {
+
+  background-color: #f3713c;
+  border-color: #f3713c;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 13px 29px;
+  line-height: 17px;
+  font-size: 14px;
+
 }

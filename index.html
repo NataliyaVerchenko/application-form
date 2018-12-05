@@ -7,164 +7,181 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="/index.css">
+    <title>Document</title>
+</head>
 
+<body>
+    <div class="container wrapper">
+        <form action="#" method="post" class="application-form" id="application-form" autocomplete="on">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <h2>Vakansiy</h2>
+                    <div class="form-fields">
+
+                        <label for="name">Full Name *</label>
+
+
+                        <input type="text" name="name" id="name" class="select form-control" required />
+
+                    </div>
+                    <div class="form-fields">
+
+                        <label for="email">E-mail*</label>
+                        <input type="email" name="email" id="email" class="select form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="test@gmail.com">
+
+                    </div>
+                    <div class="form-fields">
+
+                        <label for="phone">Phone number *</label><br>
+                        <label>Enter a telephone number (in the form xxx-xxx-xxxx): </label><br>
+                        <input type="tel" name="phone" id="phone" class="select form-control" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                            placeholder="1234567890">
+
+                    </div>
+                    <div class="form-fields">
+
+                        <label for="position">Required position:</label>
+                        <input type="text" name="position" id="position" class="select form-control">
+
+                    </div>
+                    <h2>Languages</h2>
+                    <div class="form-fields">
+
+                        <p><b>English</b></p>
+
+                    </div>
+                    <div class="form-fields">
+                        <p><input name="english" type="radio" class="radio-btn select" value="Pre-Intermediate" checked><span class="item-lv">Pre-Intermediate</span></p>
+                        <p><input name="english" type="radio" class="radio-btn select" value="Intermediate"><span class="item-lv">Intermediate</span></p>
+                        <p><input name="english" type="radio" class="radio-btn select" value="Upper-Intermediate"><span class="item-lv">Upper-Intermediate</span></p>
+                        <p><input name="english" type="radio" class="radio-btn select" value="Advanced"><span class="item-lv">Advanced</span></p>
+                        <p><input name="english" type="radio" class="radio-btn select" value="Mastery"><span class="item-lv">Mastery</span></p>
+
+                    </div>
+
+                </div>
+                <div class="col-md-7">
+                    <h2>Recent projects</h2>
+                    <div class="form-fields">
+
+                        <label>Project name/link/git (if can provide):</label>
+
+                        <input type="text" size="40" name='projectInfo' class="select form-control">
+
+
+                    </div>
+                    <div class="form-fields">
+
+                        <label>Project tech stack:</label>
+
+                        <input type="text" size="40" name='projectStack' class="select form-control" />
+
+                    </div>
+                    <div class="form-fields">
+
+                        <label>Project description</label>
+
+                        <textarea name="projectDescription" cols="40" rows="5" class="select form-control"></textarea>
+
+                    </div>
+                    <div class="form-fields">
+
+                        <label>Your role in this project (define extensively):</label>
+
+                        <textarea name="projectRole" cols="40" rows="5" class="select form-control"></textarea>
+
+                    </div>
+                    <h2>Summary</h2>
+                    <div class="form-fields">
+
+                        <label>Place here short description about yourself</label>
+
+                        <textarea name="summaryMessage" cols="40" rows="5" class="select form-control"></textarea>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row apf-wrp_table">
+                    <div class="col-md-12 ">
+                        <!--Table info start-->
+        
+                        <h2>Recent projects</h2>
+                        <div class="form-fields row">
+                            <div class="col-md-12">
+                                <div id="table">
+                                    <div class="tr row">
+                                        <div class="th col-md-4">
+                                            Languages and tools
+                                        </div>
+                                        <div class="th col-md-4">
+                                            Experience (yrs)
+                                        </div>
+                                        <div class="th col-md-4">
+                                            Last used
+                                        </div>
+                                    </div>
+                                    <div class="tr row tech">
+                                        <div class="td col-md-4">
+                                            <input type="text" name="languagesTools" class="text-dark form-control">
+                                        </div>
+                                        <div class="td col-md-4">
+                                            <input type="text" name="experienceYears" list="defaultTels" class="form-control">
+                                            <datalist id="defaultTels">
+                                                <option value="1">
+                                                <option value="2">
+                                                <option value="3">
+                                                <option value="4">
+                                            </datalist>
+                                        </div>
+                                        <div class="td col-md-4">
+                                            <input type="text" name="lastUsed" list="defaultYers" class="form-control">
+                                            <datalist id="defaultYers">
+                                                <option value="2015">
+                                                <option value="2016">
+                                                <option value="2017">
+                                                <option value="2018">
+                                            </datalist>
+        
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="btn-control">
+                                <input id="addFilds" onclick="addFields()" class="add-fields" value="add tools" type="button"/>
+                            </div>
+                           
+                        </div>
+        
+        
+                        <!--table end-->
+        
+                    </div>
+                </div>
+                <div class="form-row fixed">
+                        <div class="col-md-12 text-center">
+                            <div class="form-fields">
+                                <input type="submit" class="apf__submit" />
+                            </div>
+                        </div>
+                    </div>
+        </form>
+     
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-
-    <title>Document</title>
-
-</head>
-
-<body class="container">
-    <div class="wrapper">
-        <form action="#" method="post" class="application-form" id="application-form" autocomplete="on">
-            <div class="form-fields">
-                <div class="form-group row">
-                    <label for="name" class="col-md-2 col-form-label">Full Name *</label>
-                    <div class="col-md-10">
-                        <input type="text" name="name" id="name" class="select form-control" required>
-                    </div>
-                </div>
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label for="email">E-MAIL*</label>
-                    <input type="email" name="email" id="email" class="select" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        placeholder="test@gmail.com">
-                </div>
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label for="phone">Phone number *</label><br>
-                    <label>Enter a telephone number (in the form xxx-xxx-xxxx): </label><br>
-                    <input type="tel" name="phone" id="phone" class="select" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                        placeholder="1234567890">
-                </div>
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label for="position">Required position:</label>
-                    <input type="text" name="position" id="position" class="select">
-                </div>
-            </div>
-
-            <h2>Recent projects</h2>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label>Project name/link/git (if can provide):</label>
-                    <br>
-                    <input type="text" size="40" name='projectInfo' class="select">
-                </div>
-
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label>Project tech stack:</label>
-                    <br>
-                    <input type="text" size="40" name='projectStack' class="select" />
-                </div>
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label>Project description</label>
-                    <br>
-                    <textarea name="projectDescription" cols="40" rows="5" class="select"></textarea>
-                </div>
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label>Your role in this project (define extensively):</label>
-                    <br>
-                    <textarea name="projectRole" cols="40" rows="5" class="select"></textarea>
-                </div>
-            </div>
-            <h2>Summary</h2>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <label>Place here short description about yourself</label>
-                    <br>
-                    <textarea name="summaryMessage" cols="40" rows="5" class="select"></textarea>
-                </div>
-            </div>
-            <h2>Languages</h2>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <p>English</p>
-                </div>
-            </div>
-            <div class="form-fields row">
-                <div class="col-md-12">
-                    <input name="english" type="radio" class="radio-btn select" value="Pre-Intermediate" checked>Pre-Intermediate
-                    <input name="english" type="radio" class="radio-btn select" value="Intermediate">Intermediate
-                    <input name="english" type="radio" class="radio-btn select" value="Upper-Intermediate">Upper-Intermediate
-                    <input name="english" type="radio" class="radio-btn select" value="Advanced">Advanced
-                    <input name="english" type="radio" class="radio-btn select" value="Mastery">Mastery
-                </div>
-            </div>
-            <div class="form-fields">
-                <input type="submit" class="application-form__submit" />
-            </div>
-        </form>
-
-        <!--Table info start-->
-
-        <h2>Recent projects</h2>
-        <div class="form-fields row">
-            <div class="col-md-12">
-                <div id="table">
-                    <div class="tr row">
-                        <div class="th col-md-4">
-                            Languages and tools
-                        </div>
-                        <div class="th col-md-4">
-                            Experience (yrs)
-                        </div>
-                        <div class="th col-md-4">
-                            Last used
-                        </div>
-                    </div>
-                    <div class="tr row tech">
-                        <div class="td col-md-4">
-                            <input type="text" name="languagesTools" class="text-dark">
-                        </div>
-                        <div class="td col-md-4">
-                            <input type="text" name="experienceYears" list="defaultTels">
-                            <datalist id="defaultTels">
-                                <option value="1">
-                                <option value="2">
-                                <option value="3">
-                                <option value="4">
-                            </datalist>
-                        </div>
-                        <div class="td col-md-4">
-                            <input type="text" name="lastUsed" list="defaultYers">
-                            <datalist id="defaultYers">
-                                <option value="2015">
-                                <option value="2016">
-                                <option value="2017">
-                                <option value="2018">
-                            </datalist>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <button id="addFilds" onclick="addFilds()">addFilds</button>
-
-        <!--table end-->
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
 </body>
 
 </html>
